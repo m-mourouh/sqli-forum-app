@@ -12,14 +12,6 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import {getStorage} from "firebase/storage";
-// const firebaseConfig = {
-//   apiKey: "AIzaSyA3h6MEx_xx_BO0Eb3yBNKF77QoUAEXcJ0",
-//   authDomain: "sqliforum.firebaseapp.com",
-//   projectId: "sqliforum",
-//   storageBucket: "sqliforum.appspot.com",
-//   messagingSenderId: "892284271071",
-//   appId: "1:892284271071:web:8294e8583eef2fbd07ac6a",
-// };
 const firebaseConfig = {
   apiKey: "AIzaSyBgWD4bWalIbx8ys3ShLrBEj2dAHblD-Ek",
   authDomain: "sqli-16f9c.firebaseapp.com",

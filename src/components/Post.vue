@@ -18,7 +18,7 @@
       </template>
     </a>
     <p class="desktop-only text-small">
-      {{ userPostsCount }} posts
+      {{ userPostsCount(post.userId) }} posts
     </p>
   </div>
   <div class="post-content">
@@ -70,11 +70,13 @@ export default {
 
     // computed properties
     const users = computed(() => store.state.users);
+    const posts = computed(() => store.state.posts);
     const authUser = computed(() => store.state.authUser);
     const userPosts = computed(() => store.getters.authUserPosts);
-    const userPostsCount = computed(() => userPosts.value.length);
+    // const userPostsCount = computed(() => userPosts.value.length);
     // methods
     const userById = (userId) => users.value.find((user) => user.id === userId);
+    const userPostsCount = (userId) => posts.value.filter((post) => post.userId === userId).length;
     const removePost = (userId, postId, threadId) => {
       store.dispatch("removePost", { userId, postId, threadId });
     };
